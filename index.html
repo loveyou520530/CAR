@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上估車表單</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        small {
+            color: #888;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>線上估車表單</h2>
+
+    <form action="#" method="post" id="carEstimationForm">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">電話：</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        <small>請輸入10位數字的電話號碼，不含其他字元。</small>
+
+        <label for="lineId">LINE ID：</label>
+        <input type="text" id="lineId" name="lineId" required>
+
+        <label for="carMake">車款：</label>
+        <input type="text" id="carMake" name="carMake" required>
+
+        <label for="carModel">車型：</label>
+        <input type="text" id="carModel" name="carModel" required>
+
+        <label for="manufacturingYear">製造年份：</label>
+        <input type="number" id="manufacturingYear" name="manufacturingYear" min="1900" max="2024" required>
+
+        <label for="mileage">里程數：</label>
+        <input type="number" id="mileage" name="mileage" min="0" required>
+
+        <label for="condition">車況：</label>
+        <select id="condition" name="condition" required>
+            <option value="excellent">極佳</option>
+            <option value="good">良好</option>
+            <option value="fair">普通</option>
+            <option value="poor">差</option>
+        </select>
+
+        <button type="submit">提交</button>
+    </form>
+
+    <script>
+        document.getElementById("carEstimationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // 在這裡可以添加 JavaScript 代碼處理表單提交，例如使用 AJAX 發送估車請求等
+            // 這裡只是一個簡單的範例，實際應用中可能需要更多功能和後端支持
+            alert("表單已提交！"); 
+        });
+    </script>
+
+</body>
+</html>
